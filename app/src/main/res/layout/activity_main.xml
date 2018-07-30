@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wyn.appcurrencyconverter.MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
+        android:entries="@array/spinnerItems1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/amountValue"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="69dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:layout_marginStart="13dp"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="87dp"
+        app:layout_constraintLeft_toLeftOf="@+id/resultBox"
+        android:layout_marginLeft="13dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="115dp"
+        android:layout_height="43dp"
+        android:entries="@array/spinnerItems2"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/amountValue"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintLeft_toLeftOf="@+id/spinner1" />
+
+    <EditText
+        android:id="@+id/amountValue"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/resultBox"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="19dp"
+        app:layout_constraintLeft_toLeftOf="@+id/spinner2" />
+
+    <TextView
+        android:id="@+id/resultBox"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:textSize="30sp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/convertBtn"
+        app:layout_constraintRight_toRightOf="@+id/amountValue"
+        android:layout_marginTop="33dp"
+        app:layout_constraintTop_toBottomOf="@+id/AmountLabel"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintLeft_toLeftOf="@+id/amountValue" />
+
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:text="To:"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="33dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/AmountLabel"
+        app:layout_constraintRight_toRightOf="@+id/AmountLabel"
+        android:layout_marginTop="34dp"
+        app:layout_constraintTop_toBottomOf="@+id/fromLabel"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="33dp" />
+
+    <TextView
+        android:id="@+id/AmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:text="Amount:"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="34dp" />
+
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From:"
+        android:layout_marginStart="34dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner1"
+        android:layout_marginLeft="34dp" />
+
+</android.support.constraint.ConstraintLayout>
